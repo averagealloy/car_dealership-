@@ -1,0 +1,2 @@
+class TestDrive < ApplicationRecord
+end
