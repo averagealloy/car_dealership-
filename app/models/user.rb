@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          
-         has_many :cars, through :dealerships
+         has_many :cars, through: :dealerships
 
 end
