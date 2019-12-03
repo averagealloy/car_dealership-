@@ -29,4 +29,27 @@ Things you may want to cover:
 
 user table , dealership table , car table , test drive 
 
+dealer 
 
+    has many cars (m)
+    has many test drive through cars (m)
+
+
+cars (join)
+    belongs to dealer (m)
+    belongs to test drive (m) 
+    dealer id (t)
+    test drive id (t)
+    car attrs 
+
+
+user 
+    has many test drives (m)
+    has many cars through test drives (m)
+
+test drives 
+    has many users (m)
+    has many cars (m)
+    has many dealers through cars (m) 
+    user id (t)
+    time stamp (t)

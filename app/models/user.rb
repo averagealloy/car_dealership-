@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         
-         has_many :cars, through: :dealerships
+         has_many :test_drives
+         has_many :cars, through: :test_drive s
 
 end
