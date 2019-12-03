@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_many :test_drives
-         has_many :cars, through: :test_drive s
+         has_many :cars, through: :test_drives
 
 end
