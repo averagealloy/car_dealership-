@@ -20,8 +20,6 @@ ActiveRecord::Schema.define(version: 2019_12_03_212423) do
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "dealership_id"
-    t.integer "test_drive_id"
     t.string "name"
   end
 
