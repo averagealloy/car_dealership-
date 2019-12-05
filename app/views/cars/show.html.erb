@@ -1,9 +1,15 @@
-<h1> <%= @cars.name %></h1>
+<h1> <%= @car.name %></h1>
+
 
 <ul>
-    <%= @cars.doors%>
-    <%= @cars.cylinders%>
-    <%= @cars.color%>
-    <%= @cars.transmission%>
-    <%= @cars.price%>
+    <%= @car.doors%>
+    <%= @car.cylinders%>
+    <%= @car.color%>
+    <%= @car.transmission%>
+    <%= @car.price%>
 </ul>
+
+
+
+
+<%= link_to "Back to inventory", dealership_path(@car.dealership) %>
