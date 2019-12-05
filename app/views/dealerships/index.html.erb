@@ -1,0 +1,7 @@
+<h1> the list of dealerships </h1>
+<ul> 
+
+<% @dealerships.each do |f| %>
+   <li> <%= link_to f.name, dealerships_path(f) %> </li>
+   <% end %>
+</ul>
