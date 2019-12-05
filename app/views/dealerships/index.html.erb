@@ -2,6 +2,6 @@
 <ul> 
 
 <% @dealerships.each do |f| %>
-   <li> <%= link_to f.name, dealerships_path(f) %> </li>
+   <li> <%= link_to f.name, dealership_path(f) %> </li>
    <% end %>
 </ul>
