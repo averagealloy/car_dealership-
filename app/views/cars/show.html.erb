@@ -2,14 +2,20 @@
 
 
 <ul>
+    <br/>
     <%= @car.doors%>
+    <br/>
     <%= @car.cylinders%>
+    <br/>
     <%= @car.color%>
+    <br/>
     <%= @car.transmission%>
+    <br/>
     <%= @car.price%>
 </ul>
 
 
+<h2><%= link_to "Test Drive #{@car.name}", new_car_path %></h2>
 
 
-<%= link_to "Back to inventory", dealership_path(@car.dealership) %>
+<h3> <%= link_to "Back to inventory", dealership_path(@car.dealership) %> </h3>
