@@ -7,4 +7,5 @@ class DealershipsController < ApplicationController
     def show
          @dealership = Dealership.find_by(id: params[:id])
     end 
+    
 end

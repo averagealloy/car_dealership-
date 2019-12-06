@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_172614) do
+ActiveRecord::Schema.define(version: 2019_12_06_001022) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "doors"
@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_172614) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
-    t.integer "test_drive_id"
     t.integer "dealership_id"
   end
 
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_12_04_172614) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id"
+    t.integer "car_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,5 @@
 class Car < ApplicationRecord
     belongs_to :dealership
-    belongs_to :test_drive 
+    has_many :test_drives 
+    has_many :users, through: :test_drives 
 end

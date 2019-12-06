@@ -8,4 +8,9 @@ class CarsController < ApplicationController
     def show
         @car = Car.find(params[:id])
    end 
+
+   def new 
+    @test_drive = TestDrive.new 
+    end 
+
 end
