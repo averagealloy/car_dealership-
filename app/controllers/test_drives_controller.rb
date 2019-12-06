@@ -7,10 +7,11 @@ class TestDrivesController < ApplicationController
 
 
    def create
-    @test_drive = TestDrife.find(params[:car_id])
+      @test_drive = current_user.test_drives.build(test_drive_params)
+      #probly wrong 
    end  
 
-   
+
 end
 
 
