@@ -6,6 +6,7 @@ class TestDrivesController < ApplicationController
     end 
 
 
-   def create 
+   def create
+    @test_drive = TestDrife.find(params[:car_id])
    end  
 end

@@ -1,9 +1,10 @@
 <h1> <%= @dealership.name %></h1>
 <ul>
     <% @dealership.cars.each do |c|%>
-    <%= link_to c.name, car_path(c) %>
+    <%=  link_to c.name, car_path(c) %>
+    </br>
     <% end %>    
 </ul>
 
 
-<li><%= link_to "list of dealerships", dealerships_path%></li>
+<ul><%= link_to "list of dealerships", dealerships_path%></ul>

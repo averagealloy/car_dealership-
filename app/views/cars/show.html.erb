@@ -3,18 +3,21 @@
 
 <ul>
     <br/>
-    <%= @car.doors%>
+    
+    Doors: <%=  @car.doors%>
     <br/>
-    <%= @car.cylinders%>
+    Cylinders: <%=  @car.cylinders%>
     <br/>
-    <%= @car.color%>
+    Color: <%= @car.color%>
     <br/>
-    <%= @car.transmission%>
+    transmission: <%= @car.transmission%>
     <br/>
-    <%= @car.price%>
+    Price: $<%= @car.price%>
 </ul>
 
- 
+
+
+
 <h2><%= link_to "Test Drive #{@car.name}", new_car_test_drife_path(@car.id) %></h2>
 
 
