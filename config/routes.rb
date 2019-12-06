@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'application#welcome'
   resources :cars do 
-    resources :test_drive
+    resources :test_drives
   end 
   resources :users
   resources :dealerships 
