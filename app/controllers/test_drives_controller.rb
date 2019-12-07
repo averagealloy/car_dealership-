@@ -7,15 +7,20 @@ class TestDrivesController < ApplicationController
 
 
    def create
-      # @test_drive = current_user.test_drives.build(car_id: params[:car_id], 
-      #    test_drive_date: params[:test_drifes_params])
-      #    if @test_drive.save
-      #       redirect_to 
-      #    else 
-      #       render :new
-      #    end 
-      render :show
+      
+      @test_drive = current_user.test_drives.build(car_id: params[:car_id], 
+         test_drive_date: params[:test_drifes_params])
+         if @test_drive.save
+            redirect_to  car_test_drife_path(@test_drive.car)
+         else 
+            render :new
+         end 
+     
    end  
+
+   def show 
+      @test_drive = TestDrife.find_by(id: params[:id])
+   end 
 
    private
 

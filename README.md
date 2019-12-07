@@ -1,59 +1,36 @@
-# README
+Car dealerships
+this project shows a network of car dealerships and there specfic cars. after a user singns in they can look at the cars and sort by specfic attributes. once they have found a car they can pick a date to go on a test drive with that car. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Getting Started
+clone down this repo and open up the editor of choice.
 
-Things you may want to cover:
+when you clone this repo run rake db:migrate 
+then it will probly instruct you to run update yarn so please do that 
+there is no seed data so go into the console  and create some cars and dealerships 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+until finished
+End with an example of getting some data out of the system or using it for a little demo
 
 
 
-4 tables 
+Give an example
+Deployment
+if someone wanted to start a dealership method 
 
-user table , dealership table , car table , test drive 
-
-dealer 
-
-    has many cars (m)
-    has many test drive through cars (m)
-
-
-cars (join)
-    belongs to dealer (m)
-    belongs to test drive (m) 
-    dealer id (t)
-    test drive id (t)
-    car attrs 
-
-
-user 
-    has many test drives (m)
-    has many cars through test drives (m)
-
-test drives 
-    has many users (m)
-    has many cars (m)
-    has many dealers through cars (m) 
-    user id (t)
-    time stamp (t)
+Built With
+ruby as lang
+rails a a frame work 
+devise as a signin method 
+oauth is also going to be a sign in method 
 
 
 
-test
+Authors
+see Acknowledgments of people who helped me get here i was mearly just a vessel 
+
+License
+This project is licensed under the MIT License - see the LICENSE.md file for details
+
+Acknowledgments
+Hat tip to anyone whose code was used - cohort mates teachers for letting me bother them relentlasly 
+Inspiration - DEADLINES 
