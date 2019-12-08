@@ -8,15 +8,14 @@ class TestDrivesController < ApplicationController
 
 
    def create
-       @test_drive = current_user.test_drives.build(car_id: params[:car_id], 
-         test_drive_date: params[:test_drifes_params])
+       
+       @test_drive = current_user.test_drives.build(car_id: params[:car_id], test_drive_date: test_drifes_params)
+         byebug
          if @test_drive.save
-            redirect_to car_test_drives_path(@test_drive.car)
+            redirect_to car_test_drife_path(@test_drive.car)
          else 
-            render :index
+            render :show
          end
-
-     
    end  
 
    def show 
@@ -24,7 +23,7 @@ class TestDrivesController < ApplicationController
    end 
 
    def index 
-   end 
+   end    
 
    private
 

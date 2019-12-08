@@ -4,5 +4,9 @@ class TestDrife < ApplicationRecord
   #whats going on here look dow ask someone if this check out 
   has_many :dealerships, through: :cars 
 
-  validates :test_drive_date, presence: true 
+  validates :test_drive_date, presence: true
+  def test_drive_date= (hash = {})
+    self.test_drive_date = "#{'test_drive_date(1i)'} , #{'test_drive_date(2i)'} , #{
+    'test_drive_date(3i)'}"  
+  end 
 end
