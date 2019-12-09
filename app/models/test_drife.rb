@@ -4,10 +4,10 @@ class TestDrife < ApplicationRecord
   #whats going on here look dow ask someone if this check out 
   has_many :dealerships, through: :cars 
 
-  validates :test_drive_date, presence: true
+  # validates :test_drive_date, presence: true
   
   
-  accepts_nested_attributes_for :car
+  # accepts_nested_attributes_for :car
 
   
   # def test_drive_date= (hash = {})

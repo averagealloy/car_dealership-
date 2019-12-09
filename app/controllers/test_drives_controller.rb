@@ -9,9 +9,9 @@ class TestDrivesController < ApplicationController
 
    def create
        
-      #  @test_drive = current_user.test_drives.build(car_id: params[:car_id], test_drive_date: test_drifes_params)
-      @test_drive = current_user.test_drives.build(test_drifes_params)
-         
+       @test_drive = current_user.test_drives.build(car_id: params[:car_id], test_drive_date: test_drifes_params)
+      # @test_drive = current_user.test_drives.build(test_drifes_params)
+         byebug
          if @test_drive.save
             redirect_to car_test_drife_path(@test_drive.car)
          else 
@@ -30,10 +30,9 @@ class TestDrivesController < ApplicationController
 
    def test_drifes_params
       
-         params.require(:test_drife).permit(:date, :car_id, :user_id, car_attributes: [:date])
-
+         params.require(:test_drife).permit(:car_id, :test_drive_date, :user_id)
+         
    end 
-
 end
 
 
