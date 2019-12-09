@@ -3,13 +3,11 @@ class TestDrivesController < ApplicationController
    def new 
       @car = Car.find(params[:car_id])
       @test_drive = @car.test_drives.build 
-      #what the hell is .build 
+      
     end 
 
 
    def create
-       
-      # @test_drive = current_user.test_drives.build(car_id: params[:car_id])
        @test_drive = current_user.test_drives.build(test_drifes_params)
          
          if @test_drive.save
@@ -23,7 +21,7 @@ class TestDrivesController < ApplicationController
       @test_drive = TestDrife.find_by(id: params[:id])
    end 
 
-     
+    
 
    private
 
