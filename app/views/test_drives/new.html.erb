@@ -1,7 +1,8 @@
 <h1> what date do you want your test drive to be </h1>
 
 <%= form_for([@car, @test_drive]) do |f|%>
-   <%= hidden_field(test_drife, @car) %>
+   <%= f.hidden_field(:car_id, :value => @car.id )  %>
+   
      <%= f.date_select :test_drive_date %>
     <%= f.submit "drive time" %>
  <% end %>
