@@ -11,9 +11,9 @@ class TestDrivesController < ApplicationController
        
       # @test_drive = current_user.test_drives.build(car_id: params[:car_id])
        @test_drive = current_user.test_drives.build(test_drifes_params)
-         byebug
+         
          if @test_drive.save
-            redirect_to car_test_drife_path(@test_drive.car)
+            redirect_to car_test_drife_path(@test_drive.car.id, @test_drive.id)
          else 
             render :show
          end
@@ -23,8 +23,7 @@ class TestDrivesController < ApplicationController
       @test_drive = TestDrife.find_by(id: params[:id])
    end 
 
-   def index 
-   end    
+     
 
    private
 
