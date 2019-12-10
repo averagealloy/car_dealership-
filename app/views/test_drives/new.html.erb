@@ -1,10 +1,10 @@
 <h1> what date do you want your test drive to be </h1>
 
-<%= form_for([@car, @test_drive]) do |f|%>
-   <%= f.hidden_field(:car_id, :value => @car.id )  %>
+<%= form_for([@car, @test_drive]) do |td|%>
+   <%= td.hidden_field(:car_id, :value => @car.id )  %>
    
-     <%= f.date_select :test_drive_date %>
-    <%= f.submit "drive time" %>
+     <%= td.date_select :test_drive_date %>
+    <%= td.submit "drive time" %>
  <% end %>
 
 <h2><%= link_to "Do you want to see that car again ?", car_path(@car.id) %></h2> 

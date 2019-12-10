@@ -1,7 +1,7 @@
 <h1> the list of dealerships </h1>
 <ul> 
 
-<% @dealerships.each do |f| %>
-   <li> <%= link_to f.name, dealership_path(f) %> </li>
+<% @dealerships.each do |d| %>
+   <li> <%= link_to d.name, dealership_path(d) %> </li>
    <% end %>
 </ul>
