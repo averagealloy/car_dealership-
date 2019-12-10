@@ -5,7 +5,7 @@ class DealershipsController < ApplicationController
     end 
 
     def show
-         @dealership = Dealership.find(id: params[:id]) #find the right dealership (setting id to the specfic params id)
+         @dealership = Dealership.find_by(id: params[:id]) #find the right dealership. setting id to the specfic params id
     end 
     
 end
