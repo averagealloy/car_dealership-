@@ -22,3 +22,14 @@ so what are my views doing
         -show.html.erb 
             this has 2 header tags on that interpolates the car that you have selcted for a testdrive then in the second tag it displays the the test drive that you have selected date.    
 
+        -config/initializers/devise 
+            in this folder im a little fuzzy but im going to explain this to the best of my ablilites its saying ok get the credentails for this app the info you looking for is found inside google/ google key and access id this could either be a hit or a miss but we shall see 
+
+        -credintals.yml.enc
+            this is an encryped file. the next part I need to dive in a bit more but it is an encryped file of both the sec and the id  
+
+        -routes.rb 
+             in this file I have  2 resources and 1 neststed resource. resources give us the 7 crud functions that we had seen in sinara 
+             and nested routes say that thru cars we can get thoes through 
+
+
