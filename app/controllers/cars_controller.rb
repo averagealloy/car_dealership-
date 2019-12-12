@@ -14,4 +14,11 @@ class CarsController < ApplicationController
     @car = Car.new # set car to car.new 
     @test_drive = TestDrive.new #set test drive to test_drive.new 
     end 
+
+    
+    def cyl
+        @cars = Car.small_cyl
+    end 
+
+
 end

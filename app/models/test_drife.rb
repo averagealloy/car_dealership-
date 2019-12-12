@@ -6,6 +6,7 @@ class TestDrife < ApplicationRecord
 
   validates :test_drive_date, presence: true #a simple validation to make sure the drop down isnt empty (impossible by the way bc ypu start on todays date)
 
-
+ 
+  
 
 end

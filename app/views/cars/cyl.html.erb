@@ -1,0 +1,8 @@
+<h1> these cars will help you get better gas.</h1>
+
+  <% @cars.each do |c|%>
+    <%=  link_to c.name, car_path(c) %>
+    </br>
+    <% end %>
+    
+      

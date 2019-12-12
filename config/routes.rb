@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'application#welcome'
   resources :dealerships 
+  get 'cars/bettergas', to: 'cars#cyl'
   resources :cars do 
     resources :test_drives
   end 

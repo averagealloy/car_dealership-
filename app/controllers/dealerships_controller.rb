@@ -8,4 +8,5 @@ class DealershipsController < ApplicationController
          @dealership = Dealership.find_by(id: params[:id]) #find the right dealership. setting id to the specfic params id
     end 
     
+
 end
