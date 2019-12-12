@@ -17,12 +17,13 @@ class TestDrivesController < ApplicationController
    end  
 
    def show 
-      @test_drive = TestDrife.find_by(id: params[:id]) #I know that find by YOU WILL GET NIL but the this is saying find test dive and set its params 
+      @test_drive = TestDrife.find_by(id: params[:id]) #I know that find by YOU WILL GET NIL but the this is saying find test drive and set its params 
    end 
+
 
     
 
-   private # the stay off my lawn line 
+   private # the stay off my lawn line (you get get to this stuff)
 
    def test_drifes_params
          params.require(:test_drife).permit(:car_id, :test_drive_date, :user_id) #defining the testdrive params to be car_id, testdrive date and user id because that all I need 
