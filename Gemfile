@@ -22,10 +22,10 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'devise' 
-gem 'omniauth'
+gem "devise", "~>4.7.1"
+#gem 'omniauth'
 gem 'omniauth-google-oauth2'
-gem 'dotenv'
+gem 'dotenv-rails'
  
 
 gem 'faker'
