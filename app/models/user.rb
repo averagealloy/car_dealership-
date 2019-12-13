@@ -9,14 +9,17 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :omniauthable, omniauth_providers: [:google_oauth2] #/ could sen in as an array if i have more that one 
         
 
-        #  validates :first_name, presence: true 
-        #  validates :first_name, uniqueness: true 
-        #  validates :last_name, presence: true 
-        #  validates :last_name, uniqueness: true 
+         validates :first_name, presence: true 
+         validates :first_name, uniqueness: true 
+         validates :last_name, presence: true 
+         validates :last_name, uniqueness: true 
         
         
          def self.from_omniauth(auth)
             where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+              
+              user.first_name = auth.info.first_name
+              user.last_name = auth.info.last_name
             user.provider = auth.provider
             user.uid = auth.uid
             user.email = auth.info.email
