@@ -25,6 +25,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise' 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'dotenv'
  
 
 gem 'faker'

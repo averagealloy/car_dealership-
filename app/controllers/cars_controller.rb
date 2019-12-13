@@ -16,8 +16,8 @@ class CarsController < ApplicationController
     end 
 
     
-    def cyl
-        @cars = Car.small_cyl
+    def cyl #this a is just a peice if the scope method puzzle 
+        @cars = Car.small_cyl #im setting the varible cars equal to cars that meet that condition (small_cyl)
     end 
 
 
