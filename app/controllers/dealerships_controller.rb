@@ -1,7 +1,13 @@
 class DealershipsController < ApplicationController
 
     def index 
+        
         @dealerships = Dealership.all #set dealership to dealership.all (every dealership)
+        
+        if params[:name]
+            @dealerships= Dealership.where("name = ?", params[:name]) 
+
+        end 
     end 
 
     def show
@@ -10,3 +16,10 @@ class DealershipsController < ApplicationController
     
 
 end
+
+# if "search term" == true 
+#     go to that dealership (link_to "string " )
+
+
+
+# SELECT * FROM DEALERSHIPS WHERE NAME = TERM 

@@ -29,3 +29,7 @@ end
 
 
 
+#find you just get an error 
+#find_by give you nil (some idea of what your doing)
+
+
