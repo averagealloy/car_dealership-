@@ -1,7 +1,7 @@
 class TestDrivesController < ApplicationController
 
    def new 
-      @car = Car.find(params[:car_id]) #find the right car params 
+      @car = Car.find_by(params[:car_id]) #find the right car params 
       @test_drive = @car.test_drives.build # have a testdrive equal a specfic cars test drive and then create a new place in memmory 
       #.build is an alias to .new thanks to stackover flow 
     end 
@@ -18,6 +18,7 @@ class TestDrivesController < ApplicationController
 
    def show 
       @test_drive = TestDrife.find_by(id: params[:id]) #I know that find by YOU WILL GET NIL but this is saying find test drive and getting its params 
+      #******************************* SWITCHED TO FIND BY HELPS IN THE DEBUGGING PROCESS ***********************************************
    end 
 
    private # the stay off my lawn line (you cant get to this stuff)

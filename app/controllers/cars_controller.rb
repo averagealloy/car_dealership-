@@ -1,4 +1,5 @@
 class CarsController < ApplicationController
+#******************************* SWITCHED TO FIND BY HELPS IN THE DEBUGGING PROCESS ***********************************************
 
     def index 
         @cars = Car.all # get all the cars every last one of em 
@@ -6,14 +7,11 @@ class CarsController < ApplicationController
 
 
     def show
-        @car = Car.find(params[:id]) #if your going to show the car find the right one first 
+        @car = Car.find_by(params[:id]) #if your going to show the car find the right one first 
    end 
 
 
-   def new 
-    @car = Car.new # set car to car.new 
-    @test_drive = TestDrive.new #set test drive to test_drive.new 
-    end 
+#   removed new action did not make sense if a user cant create a car 
 
     
     def cyl #this a is just a peice if the scope method puzzle 

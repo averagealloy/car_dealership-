@@ -1,5 +1,5 @@
 class DealershipsController < ApplicationController
-
+#******************************* SWITCHED TO FIND BY HELPS IN THE DEBUGGING PROCESS ***********************************************
     def index 
         
         @dealerships = Dealership.all #set dealership to dealership.all (every dealership)
